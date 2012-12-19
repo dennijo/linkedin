@@ -23,6 +23,11 @@ module LinkedIn
         simple_query(path, options)
       end
 
+      def company_updates(options = {})
+        path = "#{person_path(options)}/following/companies}"
+        simple_query(path,options)
+      end
+
       def group_memberships(options = {})
         path = "#{person_path(options)}/group-memberships"
         simple_query(path, options)
