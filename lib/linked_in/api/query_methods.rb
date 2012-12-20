@@ -68,6 +68,7 @@ module LinkedIn
           params  = options.map { |k,v| "#{k}=#{v}" }.join("&")
           path   += "?#{params}" if not params.empty?
 
+          p "PATH: #{path}"
           Mash.from_json(get(path, headers))
         end
 
