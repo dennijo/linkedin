@@ -28,11 +28,6 @@ module LinkedIn
         simple_query(path,options)
       end
 
-      def company_detail(id,options={})
-        path = "/companies/#{id}"
-        simple_query(path,options)
-      end
-
       def company_updates(id,options={})
         path = "/companies/#{id}/updates"
         simple_query(path,options)
