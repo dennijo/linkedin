@@ -24,7 +24,7 @@ module LinkedIn
       end
 
       def company_updates(options = {})
-        path = "#{company_path(options)}/#{id}/updates}"
+        path = "#{company_path(options)}/#{options.delete(:id)}/updates}"
         simple_query(path,options)
       end
 
