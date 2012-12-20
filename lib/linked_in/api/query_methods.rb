@@ -24,7 +24,7 @@ module LinkedIn
       end
 
       def company_updates(id,options={})
-        path = "/companies/#{id}/updates}"
+        path = "/companies/#{id}/updates"
         params  = options.map { |k,v| "#{k}=#{v}" }.join("&")
         path   += "?#{params}" if not params.empty?
         simple_query(path,options)
