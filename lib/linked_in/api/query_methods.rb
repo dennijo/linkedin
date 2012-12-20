@@ -23,8 +23,10 @@ module LinkedIn
         simple_query(path, options)
       end
 
-      def company_updates(options = {})
-        path = "#{company_path(options)}/#{options.delete(:id)}/updates}"
+      def company_updates(id,options={})
+        path = "companies/#{id}/updates}?"
+        params  = options.map { |k,v| "#{k}=#{v}" }.join("&")
+        path   += "?#{params}" if not params.empty?
         simple_query(path,options)
       end
 
