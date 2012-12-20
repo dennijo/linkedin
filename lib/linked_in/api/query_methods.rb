@@ -28,6 +28,11 @@ module LinkedIn
         simple_query(path,options)
       end
 
+      def company_detail(id,options={})
+        path = "/companies/#{id}"
+        simple_query(path,options)
+      end
+
       def company_updates(id,options={})
         path = "/companies/#{id}/updates"
         simple_query(path,options)
@@ -68,7 +73,6 @@ module LinkedIn
           params  = options.map { |k,v| "#{k}=#{v}" }.join("&")
           path   += "?#{params}" if not params.empty?
 
-          p "PATH: #{path}"
           Mash.from_json(get(path, headers))
         end
 
