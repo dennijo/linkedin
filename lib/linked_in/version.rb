@@ -4,7 +4,7 @@ module LinkedIn
     MAJOR = 0
     MINOR = 3
     PATCH = 7
-    PRE   = 2
+    PRE   = 3
     STRING = [MAJOR, MINOR, PATCH, PRE].compact.join('.')
   end
 
